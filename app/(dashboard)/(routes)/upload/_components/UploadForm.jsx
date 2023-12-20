@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import AlertMessage from './AlertMsg';
 import FilePreview from './FilePreview';
 
-const UploadForm = () => {
+const UploadForm = ({ uploadBtnClick }) => {
     const [file, setFile] = useState();
     const [errorMsg, setErrorMsg] = useState();
 
@@ -33,7 +33,7 @@ const UploadForm = () => {
             </div>
             {errorMsg && <AlertMessage message={errorMsg} />}
             {file && <FilePreview file={file} removeFile={() => setFile(null)} />}
-            <button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-500'>
+            <button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-500' onClick={() => uploadBtnClick(file)} >
                 Upload
             </button>
         </div>
