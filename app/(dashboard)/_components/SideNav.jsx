@@ -24,11 +24,11 @@ const SideNav = () => {
     return (
         <div className='shadow-sm border-r h-full'>
             <div className='p-5 border-b'>
-                <Image src="/logo.png" width={150} height={100} />
+                <Image src="/logo.png" width={150} height={100} alt='logo' />
             </div>
             <div className='flex flex-col float-left w-full'>
                 {menuList.map((item, index) => (
-                    <button className={`flex gap-2 p-4 px-6 hover:bg-gray-100 w-full text-gray-500 ${activeIndex === index ? 'bg-gray-100 text-primary' : ''}`} onClick={() => setActiveIndex(index)}>
+                    <button key={index} className={`flex gap-2 p-4 px-6 hover:bg-gray-100 w-full text-gray-500 ${activeIndex === index ? 'bg-gray-100 text-primary' : ''}`} onClick={() => setActiveIndex(index)}>
                         <item.icon />
                         <h2>{item.name}</h2>
                     </button>

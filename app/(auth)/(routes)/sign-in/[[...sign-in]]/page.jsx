@@ -16,7 +16,7 @@ export default function Page() {
                     <div className="hidden lg:relative lg:block lg:p-12">
                         <a className="block text-white" href="/">
                             <span className="sr-only">Home</span>
-                            <Image src="/logo.png" width={100} height={100} />
+                            <Image src="/logo.png" alt="logo" width={100} height={100} />
                         </a>
 
                         <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">

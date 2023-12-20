@@ -1,4 +1,4 @@
-import constant from '@/utils/constant'
+import constant from '../utils/constant'
 import React from 'react'
 
 const Hero = () => {
